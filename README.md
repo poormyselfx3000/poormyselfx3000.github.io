@@ -7,6 +7,6 @@
 <body>
 <h1>thử thách 50k vnđ</h1>
 <p>thx ted exe đâu vô hack web này đi :))</p>
-<p>-<a href="https://tonyteaches.tech" target="_blank">Tony Teaches Tech</a></p>
+<p>-<a href="lmao.com" target="_blank">bruhhh</a></p>
 </body>
 </html>
