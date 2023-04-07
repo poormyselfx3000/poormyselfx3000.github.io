@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8"/>
-    <title>a wab make by Trương Đình Phước</title>
 </head>
 <body>
 <h1>thử thách 50k vnđ</h1>
