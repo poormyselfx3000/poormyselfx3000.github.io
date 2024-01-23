@@ -3,55 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Spin</title>
+    <title>Fake Loading Page</title>
     <style>
         body {
+            background-color: #000;
+            margin: 0;
+            overflow: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
         }
 
-        #circle {
-            width: 200px;
-            height: 200px;
-            background-color: #3498db;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #fff;
-            font-size: 24px;
-            cursor: pointer;
-            position: relative;
-            animation: spin 2s ease-in-out 0s forwards;
+        #loadingBar {
+            width: 100%;
+            height: 5px;
+            background-color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            animation: loadingAnimation 8s ease-in-out 0s forwards;
         }
 
-        @keyframes spin {
+        @keyframes loadingAnimation {
             0% {
-                transform: rotate(0deg);
+                width: 0;
             }
             100% {
-                transform: rotate(720deg);
+                width: 100%;
             }
         }
 
-        #inputBox {
-            margin-left: 20px;
+        #content {
+            color: #fff;
+            font-size: 24px;
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out 8s forwards, fadeOut 2s ease-in-out 10s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
         }
     </style>
 </head>
 <body>
-    <div id="circle" onclick="spinWheel()">SPIN</div>
-    <div id="inputBox">
-        <label for="values">Possible Values:</label>
-        <input type="text" id="values" placeholder="Enter comma-separated values">
+    <div id="loadingBar"></div>
+    <div id="content">
+        Hello =))
     </div>
 </body>
 </html>
 
-        }
-    </script>
-</body>
-</html>
