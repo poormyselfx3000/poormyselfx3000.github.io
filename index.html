@@ -24,7 +24,17 @@
             color: #fff;
             font-size: 24px;
             cursor: pointer;
-            transition: transform 2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+            position: relative;
+            animation: spin 2s ease-in-out 0s forwards;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(720deg);
+            }
         }
 
         #inputBox {
@@ -38,30 +48,9 @@
         <label for="values">Possible Values:</label>
         <input type="text" id="values" placeholder="Enter comma-separated values">
     </div>
+</body>
+</html>
 
-    <script>
-        function spinWheel() {
-            const circle = document.getElementById('circle');
-            const inputValues = document.getElementById('values').value;
-            const valuesArray = inputValues.split(',');
-
-            if (valuesArray.length > 1) {
-                const randomIndex = Math.floor(Math.random() * valuesArray.length);
-                const selectedValue = valuesArray[randomIndex];
-
-                circle.innerText = selectedValue;
-
-                // Rotate the wheel
-                const rotationDegrees = 720 + randomIndex * (360 / valuesArray.length);
-                circle.style.transform = `rotate(${rotationDegrees}deg)`;
-
-                // Reset the rotation after the animation
-                setTimeout(() => {
-                    circle.style.transform = 'rotate(0deg)';
-                }, 2000);
-            } else {
-                alert('Please enter at least two values.');
-            }
         }
     </script>
 </body>
