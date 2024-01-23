@@ -3,22 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fake Loading Page</title>
+    <title>demo loading</title>
     <style>
         body {
-            background-color: #000;
+            background-color: #222222;
             margin: 0;
             overflow: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            font-family: 'Sitka Text', sans-serif;
         }
 
         #loadingBar {
             width: 100%;
-            height: 5px;
-            background-color: #fff;
+            height: 15px;
+            background: linear-gradient(to right, #FF99CC, #FF0033);
             position: fixed;
             top: 0;
             left: 0;
@@ -29,6 +30,9 @@
             0% {
                 width: 0;
             }
+            50% {
+                width: 100%;
+            }
             100% {
                 width: 100%;
             }
@@ -36,10 +40,12 @@
 
         #content {
             color: #fff;
-            font-size: 24px;
+            font-size: 80px;
             text-align: center;
             opacity: 0;
-            animation: fadeIn 2s ease-in-out 8s forwards, fadeOut 2s ease-in-out 10s forwards;
+            font-family: 'Sitka Text', sans-serif;
+            text-shadow: 0 0 10px #FF99CC, 0 0 20px #FF99CC, 0 0 30px #FF99CC;
+            animation: fadeIn 2s ease-in-out 3s forwards, fadeOut 2s ease-in-out 5s forwards;
         }
 
         @keyframes fadeIn {
