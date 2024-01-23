@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>demo loading</title>
+    <title>Fake Loading Page</title>
     <style>
         body {
             background-color: #222222;
@@ -18,7 +18,7 @@
 
         #loadingBar {
             width: 100%;
-            height: 15px;
+            height: 100%;
             background: linear-gradient(to right, #FF99CC, #FF0033);
             position: fixed;
             top: 0;
@@ -45,7 +45,7 @@
             opacity: 0;
             font-family: 'Sitka Text', sans-serif;
             text-shadow: 0 0 10px #FF99CC, 0 0 20px #FF99CC, 0 0 30px #FF99CC;
-            animation: fadeIn 2s ease-in-out 3s forwards, fadeOut 2s ease-in-out 5s forwards;
+            animation: fadeIn 2s ease-in-out 5s forwards, fadeOut 2s ease-in-out 5s forwards, flash 1s ease-in-out 7s infinite;
         }
 
         @keyframes fadeIn {
@@ -65,13 +65,18 @@
                 opacity: 0;
             }
         }
+
+        @keyframes flash {
+            50% {
+                opacity: 0.8;
+            }
+        }
     </style>
 </head>
 <body>
     <div id="loadingBar"></div>
     <div id="content">
-        Hello =))
+        chào các em nhỏ 
     </div>
 </body>
 </html>
-
