@@ -3,80 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fake Loading Page</title>
-    <style>
-        body {
-            background-color: #222222;
-            margin: 0;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            font-family: 'Sitka Text', sans-serif;
-        }
-
-        #loadingBar {
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to right, #FF99CC, #FF0033);
-            position: fixed;
-            top: 0;
-            left: 0;
-            animation: loadingAnimation 8s ease-in-out 0s forwards;
-        }
-
-        @keyframes loadingAnimation {
-            0% {
-                width: 0;
-            }
-            50% {
-                width: 100%;
-            }
-            100% {
-                width: 100%;
-            }
-        }
-
-        #content {
-            color: #fff;
-            font-size: 80px;
-            text-align: center;
-            opacity: 0;
-            font-family: 'Sitka Text', sans-serif;
-            text-shadow: 0 0 10px #FF99CC, 0 0 20px #FF99CC, 0 0 30px #FF99CC;
-            animation: fadeIn 2s ease-in-out 5s forwards, fadeOut 2s ease-in-out 5s forwards, flash 1s ease-in-out 7s infinite;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes fadeOut {
-            from {
-                opacity: 1;
-            }
-            to {
-                opacity: 0;
-            }
-        }
-
-        @keyframes flash {
-            50% {
-                opacity: 0.8;
-            }
-        }
-    </style>
+    <title>Button with Heart Animation</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="loadingBar"></div>
-    <div id="content">
-        chào các em nhỏ 
+    <div class="container">
+        <button id="playButton">Play</button>
+        <img id="heartImage" src="" alt="Heart Image" style="display: none;">
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
