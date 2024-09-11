@@ -1,14 +1,7 @@
-// Tạo đối tượng âm thanh cho nhạc nền
 const backgroundMusic = new Audio('nhacnen.mp3');
-
-// Thiết lập âm lượng 50%
-backgroundMusic.volume = 0.5;
-
-// Lặp lại nhạc nền
-backgroundMusic.loop = true;
-
-// Phát nhạc nền ngay khi tải trang
-backgroundMusic.play();
+backgroundMusic.volume = 0.5; // Thiết lập âm lượng 50%
+backgroundMusic.loop = true; // Lặp lại nhạc nền
+backgroundMusic.play(); // Phát nhạc nền ngay khi tải trang
 
 document.getElementById('playButton').addEventListener('click', function() {
     const playButton = this;
