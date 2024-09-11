@@ -1,3 +1,15 @@
+// Tạo đối tượng âm thanh cho nhạc nền
+const backgroundMusic = new Audio('nhacnen.mp3');
+
+// Thiết lập âm lượng 50%
+backgroundMusic.volume = 0.5;
+
+// Lặp lại nhạc nền
+backgroundMusic.loop = true;
+
+// Phát nhạc nền ngay khi tải trang
+backgroundMusic.play();
+
 document.getElementById('playButton').addEventListener('click', function() {
     const playButton = this;
     const heartImage = document.getElementById('heartImage');
@@ -32,4 +44,3 @@ document.getElementById('heartImage').addEventListener('click', function() {
         heartImage.classList.remove('bounce');
     }, 500); // Thời gian hoạt hình 0.5 giây
 });
-
