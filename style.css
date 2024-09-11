@@ -9,6 +9,7 @@ body {
 
 .container {
     text-align: center;
+    position: relative;
 }
 
 #playButton {
@@ -21,20 +22,31 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: all 0.3s ease;
+    position: relative;
 }
 
-#playButton:hover {
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+#playButton.explode {
+    animation: explode 0.5s forwards;
 }
 
-#playButton:active {
-    transform: scale(0.95);
+@keyframes explode {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
 }
 
 #heartImage {
-    width: 100px;
-    margin-top: 20px;
-    transition: transform 0.3s ease;
+    width: 200px; /* Kích thước trái tim đã tăng gấp đôi */
+    height: auto;
+    transition: all 0.5s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .bounce {
@@ -43,9 +55,9 @@ body {
 
 @keyframes bounce {
     0%, 100% {
-        transform: translateY(0);
+        transform: translate(-50%, -50%) scale(1);
     }
     50% {
-        transform: translateY(-20px);
+        transform: translate(-50%, -50%) scale(1.2);
     }
 }

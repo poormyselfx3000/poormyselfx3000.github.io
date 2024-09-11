@@ -1,13 +1,35 @@
 document.getElementById('playButton').addEventListener('click', function() {
+    const playButton = this;
     const heartImage = document.getElementById('heartImage');
-    // Thay link hình trái tim của bạn vào đây
-    heartImage.src = 'https://img5.thuthuatphanmem.vn/uploads/2021/07/17/anh-icon-trai-tim-ghep-anh_054623143.png'; 
-    heartImage.style.display = 'block';
+    
+    // Play âm thanh khi nhấn nút "Play"
+    const clickSound = new Audio('click.mp3');
+    clickSound.play();
+
+    // Thêm hiệu ứng "vỡ" cho nút
+    playButton.classList.add('explode');
+    
+    // Sử dụng ảnh cục bộ "image.png"
+    heartImage.src = 'traitimimage.png'; 
+    
+    // Hiển thị trái tim sau khi nút vỡ (khoảng 0.5s) với hiệu ứng lớn dần
+    setTimeout(() => {
+        heartImage.style.display = 'block';
+        heartImage.classList.add('showHeart');
+    }, 500);
 });
 
 document.getElementById('heartImage').addEventListener('click', function() {
-    this.classList.add('bounce');
+    const heartImage = this;
+    
+    // Play âm thanh khi nhấn vào trái tim
+    const cuteSound = new Audio('cute.mp3');
+    cuteSound.play();
+
+    // Hiệu ứng nhảy cho trái tim
+    heartImage.classList.add('bounce');
     setTimeout(() => {
-        this.classList.remove('bounce');
+        heartImage.classList.remove('bounce');
     }, 500); // Thời gian hoạt hình 0.5 giây
 });
+
