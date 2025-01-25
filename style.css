@@ -1,64 +1,65 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #ffe6f0;
+    font-family: Arial, sans-serif;
     margin: 0;
+    padding: 0;
+    background-color: #f9e6f2;
+    color: #4a235a;
 }
-
-.container {
-    text-align: center;
-    position: relative;
-}
-
-#playButton {
-    padding: 15px 30px;
-    font-size: 20px;
+header {
+    background: #4a235a;
     color: white;
-    background-color: #ff66b3;
-    border: none;
-    border-radius: 25px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+}
+nav {
+    text-align: center;
+    padding: 10px;
+}
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #4a235a;
+    font-weight: bold;
+    background: #f9e6f2;
+    padding: 10px 20px;
+    border-radius: 20px;
     transition: all 0.3s ease;
-    position: relative;
+}
+nav a:hover {
+    background: #4a235a;
+    color: white;
+}
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #4a235a;
+    color: white;
+}
+img {
+    max-width: 100%;
+    height: auto; 
+    border: 5px solid #003366; 
+    padding: 10px; 
+    box-sizing: border-box; 
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
-#playButton.explode {
-    animation: explode 0.5s forwards;
-}
-
-@keyframes explode {
-    0% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(0);
-        opacity: 0;
-    }
-}
-
-#heartImage {
-    width: 200px;
+.gallery img {
+    max-width: 100%;
     height: auto;
-    transition: all 0.5s ease;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    
-}
-
-.bounce {
-    animation: bounce 0.5s ease;
-}
-
-@keyframes bounce {
-    0%, 100% {
-        transform: translate(-50%, -50%) scale(1);
-    }
-    50% {
-        transform: translate(-50%, -50%) scale(1.2);
-    }
+    border: 5px solid #003366;
+    padding: 10px;
 }

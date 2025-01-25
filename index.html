@@ -3,15 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heart</title>
+    <title>My Art Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <button id="playButton">Play</button>
-        <img id="heartImage" src="" alt="Heart Image" style="display: none;">
+    <header>
+        My Art Portfolio
+    </header>
+    <nav>
+        <a href="#home" onclick="showSection('home')">Home</a>
+        <a href="#gallery" onclick="showSection('gallery')">Gallery</a>
+        <a href="#commission" onclick="showSection('commission')">Commission</a>
+        <a href="#contact" onclick="showSection('contact')">Contact</a>
+    </nav>
+    <div class="container" id="home">
+        <h2>chào mừng đến với Portfolio của mình</h2>
+        <p>
+            Mình là một artist mới nhập môn nên kỹ năng mình còn khá yếu, nhưng vẫn muốn trải nghiệm thử việc vẽ commission. Vì vậy, mình đã tạo ra trang web này để mọi người có thể order nếu hứng thú.
+        </p>
+        <h3>một số sản phẩm gần đây (chỉ có skecht thôi):</h3>
+        <div class="gallery">
+            <img src="examplearts/art1.jpg" alt="Artwork 1">
+            <img src="examplearts/art2.jpg" alt="Artwork 2">
+            <img src="examplearts/art3.jpg" alt="Artwork 3">
+        </div>
     </div>
-
+    <div class="container" id="gallery" style="display: none;">
+        <h2>arts (updatesoon)</h2>
+        <img src="art1.jpg" alt="Artwork 1">
+        <img src="art2.jpg" alt="Artwork 2">
+    </div>
+    <div class="container" id="commission" style="display: none;">
+        <h2>Commission Prices (giá sẽ thay đổi sau này nhé tại giờ mình đang giai đoạn học vẽ nên làm free)</h2>
+        <p>Sketch: $0 | Full Color: $0 | Detailed: $0</p>
+    </div>
+    <div class="container" id="contact" style="display: none;">
+        <h2>Contact Me</h2>
+        <p>Email: chimuonviral@gmail.com</p>
+        <p>phone: 0886672575</p>
+        <p>Instagram: updatesoon</p>
+        <p>Twitter: updatesoon</p>
+    </div>
+    <div class="footer">
+        &copy; 2025 My Art Portfolio
+    </div>
     <script src="script.js"></script>
+    
 </body>
 </html>
